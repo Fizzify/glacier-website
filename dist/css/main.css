@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  background-color: #181818;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+#canvas {
+  position: absolute;
+  z-index: -1 !important;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+}
+nav img {
+  float: left;
+  width: 5%;
+}
+nav .btn-check {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+nav #check {
+  display: none;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  float: right;
+  transition: opacity 0.4s ease;
+}
+nav ul li a:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 952px) {
+  .logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .btn-check {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+.hero {
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .top-container {
+  background-image: url(/images/bg.png);
+  min-height: 70vh;
+  min-width: 100vw;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 10em;
+  -webkit-animation: contentIn 1s ease;
+          animation: contentIn 1s ease;
+}
+.hero h1 {
+  font-size: 5.5rem;
+  font-weight: bold;
+  background-color: #181818;
+  max-width: 50%;
+  margin: auto;
+  border-radius: 0 0 20px 20px;
+  -webkit-animation: transitionIn 1s ease;
+          animation: transitionIn 1s ease;
+}
+.hero p {
+  font-size: 2rem;
+  font-weight: lighter;
+  padding: 2em 0;
+  text-shadow: black 0px 2px 2px;
+  color: white;
+  letter-spacing: 6px;
+}
+.hero .btn {
+  background: #278bce;
+  text-decoration: none;
+  color: white;
+  padding: 1.5em 3em 1.5em 3em;
+  border-radius: 10px;
+  -webkit-animation: 1s;
+          animation: 1s;
+  box-shadow: rgba(0, 0, 0, 0.527) 0px 1px 5px;
+  text-transform: uppercase;
+  z-index: 100 !important;
+}
+.hero .btn:hover {
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+}
+
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes contentIn {
+  from {
+    height: 200vh;
+  }
+  to {
+    height: 70vh;
+  }
+}
+@keyframes contentIn {
+  from {
+    height: 200vh;
+  }
+  to {
+    height: 70vh;
+  }
+}
+.cards h1 {
+  font-size: 5rem;
+  text-align: center;
+  padding: 1em;
+}
+.cards .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cards .container .card {
+  background: #313131;
+  width: 300px;
+  height: 400px;
+  margin: 1em;
+  border-radius: 1em;
+  padding: 0.8em;
+  transition: all 0.6s ease;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  box-shadow: black 0px 1px 3px;
+}
+.cards .container .card h2 {
+  font-size: 1.5em;
+  color: #00e1ff;
+}
+.cards .container .card .card-image {
+  background-color: aqua;
+  height: 170px;
+  margin-bottom: 1em;
+  background-size: cover;
+  border-radius: 1em;
+}
+.cards .container .card .fps-reason {
+  background-image: url(/images/fps.png);
+}
+.cards .container .card .community-reason {
+  background-image: url(/images/community.png);
+}
+.cards .container .card .mods-reason {
+  background-image: url(/images/common-mods.png);
+}
+.cards .container .card:hover {
+  background: #4e4e4e;
+  cursor: pointer;
+  transform: scale(1.03);
+  box-shadow: white 0px 5px;
+}/*# sourceMappingURL=main.css.map */
