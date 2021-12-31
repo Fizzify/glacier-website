@@ -5,6 +5,7 @@ body {
   background-color: #181818;
   color: white;
   font-family: "Josefin Sans", sans-serif;
+  animation: opacityAnim 0.3s ease;
 }
 
 /* Box sizing rules */
@@ -70,4 +71,14 @@ select {
   position: absolute;
   z-index: -1 !important;
   position: fixed;
+}
+
+@keyframes opacityAnim {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

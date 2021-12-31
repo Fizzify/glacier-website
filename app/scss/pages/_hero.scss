@@ -37,6 +37,18 @@
     letter-spacing: 6px;
   }
 
+  .installation {
+    font-size: 1rem;
+    text-decoration: none;
+
+    p {
+        letter-spacing: unset;
+        text-shadow: unset;
+        color: $primaryColor;
+        font-size: .8em;
+    }
+  }
+
 
   .btn {
     background: $primaryColor;

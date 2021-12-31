@@ -1,0 +1,18 @@
+.bottom-container {
+  background-image: url(/images/bg.png);
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em;
+
+  a {
+      text-decoration: none;
+      color: $primaryColor;
+      transition: opacity 0.4s ease;
+
+      &:hover {
+          opacity: 0.7;
+      }
+  }
+}

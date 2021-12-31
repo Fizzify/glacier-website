@@ -4,6 +4,8 @@ body {
   background-color: #181818;
   color: white;
   font-family: "Josefin Sans", sans-serif;
+  -webkit-animation: opacityAnim 0.3s ease;
+          animation: opacityAnim 0.3s ease;
 }
 
 /* Box sizing rules */
@@ -72,6 +74,23 @@ select {
   position: fixed;
 }
 
+@-webkit-keyframes opacityAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 nav {
   width: 100%;
   position: fixed;
@@ -154,6 +173,23 @@ nav ul li a:hover {
     left: 0;
   }
 }
+.bottom-container {
+  background-image: url(/images/bg.png);
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em;
+}
+.bottom-container a {
+  text-decoration: none;
+  color: #278bce;
+  transition: opacity 0.4s ease;
+}
+.bottom-container a:hover {
+  opacity: 0.7;
+}
+
 .hero {
   max-width: 80%;
   margin: auto;
@@ -191,6 +227,16 @@ nav ul li a:hover {
   text-shadow: black 0px 2px 2px;
   color: white;
   letter-spacing: 6px;
+}
+.hero .installation {
+  font-size: 1rem;
+  text-decoration: none;
+}
+.hero .installation p {
+  letter-spacing: unset;
+  text-shadow: unset;
+  color: #278bce;
+  font-size: 0.8em;
 }
 .hero .btn {
   background: #278bce;
@@ -241,6 +287,9 @@ nav ul li a:hover {
   to {
     height: 70vh;
   }
+}
+.cards {
+  padding-bottom: 5em;
 }
 .cards h1 {
   font-size: 5rem;
