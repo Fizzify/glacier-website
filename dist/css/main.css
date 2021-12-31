@@ -237,6 +237,7 @@ nav ul li a:hover {
   text-shadow: unset;
   color: #278bce;
   font-size: 0.8em;
+  text-shadow: 0px 1px 1px;
 }
 .hero .btn {
   background: #278bce;
